@@ -4,7 +4,7 @@ Utilizamos la cuenta proporcionada por Nanfor
 
 
 
-![Cuenta](\..\img\Cuenta.jpg)
+![Cuenta](\img\Cuenta.jpg)
 
 
 
