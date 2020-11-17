@@ -26,13 +26,13 @@ Desde la consola lanzamos el siguiente comando:
 az group create -l EastUS -n myRGCLI 
 ```
 
-![](.\img\GrupoRecursos1.jpg)
+![](./img/GrupoRecursos1.jpg)
 
 
 
 Listamos los grupos de recursos para comprobar que se ha creado correctamente
 
-![](.\img\GrupoRecursos2.jpg)
+![](./img/GrupoRecursos2.jpg)
 
 ### 3 - Crear la máquina virtual Linux (Ubuntu)
 
@@ -53,13 +53,13 @@ az vm create ^
 
 
 
-![](.\img\CrearMaquinaVirtual1.jpg)
+![](./img/CrearMaquinaVirtual1.jpg)
 
 
 
 Listamos los elementos que ha creado en el grupo de recursos **myRGCLI** para comprobar que se ha creado correctamente la máquina virtual
 
-![](.\img\CrearMaquinaVirtual2.jpg)
+![](./img/CrearMaquinaVirtual2.jpg)
 
 
 
@@ -71,13 +71,13 @@ Antes de conectarnos debemos averiguar que IP tiene asignada la máquina que aca
 az vm list-ip-addresses --resource-group myRGCLI --name myVMCLI
 ```
 
-![](.\img\IP1.jpg)
+![](./img/IP1.jpg)
 
 
 
 O bien seleccionando la maquina desde el portal
 
-![](.\img\IP2.jpg)
+![](./img/IP2.jpg)
 
 Ahora lanzamos el siguiente comando por la consola:
 
@@ -86,7 +86,7 @@ ssh azureuser@20.185.219.238
 Nota: Dar que si en la creación del certificado SSH
 ```
 
-![](.\img\Conectarse.jpg)
+![](./img/Conectarse.jpg)
 
 ### 5 - Actualizar en Linux
 
@@ -96,7 +96,7 @@ Descargamos los paquetes de actualizacion utilizando el siguiente comando:
 sudo apt-get update
 ```
 
-![](.\img\Update.jpg)
+![](./img/Update.jpg)
 
 ### 6 - Hacer el upgrade
 
@@ -106,7 +106,7 @@ Actualizamos utilizando el siguiente comando:
 sudo apt upgrade
 ```
 
-![](.\img\actualizar.jpg)
+![](./img/actualizar.jpg)
 
 
 
@@ -118,7 +118,7 @@ Instalamos el servidor apache utilizando el siguiente comando:
 sudo apt install -y apache2 apache2-utils
 ```
 
-![](.\img\Apache.jpg)
+![](./img/Apache.jpg)
 
 ### 8 - Vemos el estatus de Apache
 
@@ -130,7 +130,7 @@ systemctl status apache2
 
 
 
-![](.\img\statusApache.jpg)
+![](./img/statusApache.jpg)
 
 
 
@@ -170,25 +170,25 @@ exit <ENTER>
 
 Para que el servidor apache pueda atender peticiones tenemos que abrir el puerto 80. Eso lo hacemos añadiendo esta regla en el grupo de seguridad asociado a la maquina **myVMCLINSG**
 
-![](.\img\80Off.jpg)
+![](./img/80Off.jpg)
 
 Como se puede comprobar el puerto 80 esta cerrado. Pulsamos sobre "**Reglas de seguridad de entrada**" en el menu de la izquierda y pulsamos en el boton agregar para añadir esa regla.
 
 
 
-![](.\img\Regla.jpg)
+![](./img/Regla.jpg)
 
 
 
 
 
-![](.\img\ReglaCreada.jpg)
+![](./img/ReglaCreada.jpg)
 
 
 
 Comprobamos que podemos acceder
 
-![](.\img\PaginaInicio.jpg)
+![](./img/PaginaInicio.jpg)
 
 
 
@@ -204,11 +204,11 @@ az vm deallocate -g myRGCLI -n myVMCLI --no-wait
 
 
 
-![](.\img\StopDeallocate.jpg)
+![](./img/StopDeallocate.jpg)
 
 
 
-![](.\img\StopDeallocate2.jpg)
+![](./img/StopDeallocate2.jpg)
 
 
 
@@ -224,11 +224,11 @@ az vm show -g myRGCLI -n myVMCLI -d
 
 
 
-![](.\img\Borrar.jpg)
+![](./img/Borrar.jpg)
 
 
 
-![](.\img\Borrar1.jpg)
+![](./img/Borrar1.jpg)
 
 
 
@@ -238,11 +238,11 @@ az vm show -g myRGCLI -n myVMCLI -d
 az group delete -n myRGCLI  --yes --no-wait
 ```
 
-![Final](D:\AZ900\Tarea\img\Final.jpg)
-
-![](.\img\BorrarRG.jpg)
 
 
+![](./img/BorrarRG.jpg)
 
-![](D:\AZ900\Tarea\img\Final.jpg)
+
+
+![](./img/Final.jpg)
 
